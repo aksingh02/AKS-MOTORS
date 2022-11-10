@@ -1,0 +1,65 @@
+body, form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background-color: rgb(235, 228, 228);
+    position: relative;
+    background-image: url(/Images/bg3.jpg);
+    background-size: 100% 150%;
+}
+.logo{
+    height: 8.5vh;
+    padding: 15px 0 0 5%;
+    background-color: rgb(37, 36, 36);
+    color: #fff;
+    display: flex;
+}
+.form-body{
+    background-color: rgb(248, 243, 243);
+    width: 40%;
+    margin: 3% 30%;
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    opacity: 0.9;
+}
+p{
+	text-align: center;
+	color:green;
+	font-weight: bolder;
+}
+.heading{
+    background-color: #a1c2e5;
+    padding: 0.5%;
+    text-align: center;
+    font-size: x-large;
+    border-radius: 10px 10px 0 0;
+}
+.register{
+    text-align: center;
+}
+.form-details{
+    text-align: left;
+    margin: 3% 3%;
+}
+input{
+    width: 100%;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+}
+.s-btn{
+    color: #fff;
+    background: #009688;
+    width: fit-content;
+    height: 5vh;
+    margin-top: 5%;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.2vw;
+}
+.s-btn:hover{
+    background: #ac46b6;
+    cursor: pointer;
+}

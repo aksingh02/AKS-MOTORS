@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(content)">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/vehicle.css" />
+  </head>
+  <body>
+    <div class="logo">
+        <div class="logo-container">
+            <span>AKS MOTORS CO.</span><br>
+            <img src="Images/logo.png" alt="logo">
+        </div>
+        <div class="About">
+           <a href="">About Us</a> 
+        </div>
+        <div class="Contact">
+           <a href="contact">Contact Us</a> 
+        </div>
+        <div class="LogOut">
+            <a href="login">LogOut</a> 
+         </div>
+    </div>
+    <th:block th:if="${session.msg}">
+		<p class="text-center fs-4 text-success">[[${session.msg}]]</p>
+		<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+	</th:block>
+      <form action="vehicleDtls" method="post">
+        <div class="form-body">
+            <div class="heading">
+                <p>Enter Your Vehicle Details</p>
+            </div>
+            <div class="register">
+                <div class="form-details">
+                    <label for="">Owner Name:</label>
+                </div>
+                <div class="form-details">
+                    <input type="text" name="owner" placeholder="Owner Name" required/>
+                </div>
+                <div class="form-details">
+                    <label for="">Vehicle Brand Name:</label>
+                </div>
+                <div class="form-details">
+                    <input type="text" name="brand" placeholder="Car Name" required/>
+                </div>
+                <div class="form-details">
+                    <label for="">Vehicle Model:</label>
+                </div>
+                <div class="form-details">
+                    <input type="text" name="model" placeholder="Car Model" required/>
+                </div>
+                <div class="form-details">
+                    <label for="">Year Of Registration:</label>
+                </div>
+                <div class="form-details">
+                    <input type="date" name="date" placeholder="Registration Year" required/>
+                </div>
+                <button type="submit" class="s-btn">Upload Details</button>
+            </div>
+		</div>
+	</form>
+  </body>
+</html>
